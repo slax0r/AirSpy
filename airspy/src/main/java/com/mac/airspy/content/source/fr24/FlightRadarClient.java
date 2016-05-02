@@ -15,7 +15,6 @@ import java.io.InputStream;
 import java.text.DecimalFormat;
 import java.text.DecimalFormatSymbols;
 
-
 public class FlightRadarClient {
     public static final String FR_AIRCRAFT_THUMBNAIL_URL =
             "http://flightradar24static.appspot.com/static/_fr24/images/sideviews/AIRCRAFT_CODE.png";

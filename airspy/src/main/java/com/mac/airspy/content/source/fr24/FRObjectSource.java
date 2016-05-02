@@ -8,7 +8,6 @@ import com.mac.airspy.content.ObjectViewProvider;
 import java.io.IOException;
 import java.util.List;
 
-
 public class FRObjectSource implements ObjectSource {
 
     @Inject

@@ -17,8 +17,6 @@ import java.util.List;
 import roboguice.inject.ContextSingleton;
 import roboguice.inject.InjectView;
 
-
-
 @ContextSingleton
 public class ARLayer extends BaseApplicationComponent implements SurfaceHolder.Callback {
 

@@ -5,7 +5,6 @@ import android.content.Context;
 
 import com.google.inject.Inject;
 
-
 public abstract class BaseApplicationComponent implements ApplicationComponent {
     @Inject
     protected Context ctx;

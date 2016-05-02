@@ -9,7 +9,6 @@ import com.mac.airspy.parameters.CameraParameters;
 import com.mac.airspy.parameters.ScreenParameters;
 import com.mac.airspy.utils.Vector3D;
 
-
 public class ScreenPositionCalculator {
 
     public static final int SCREEN_VISIBILITY_MARGIN_PX = 100;

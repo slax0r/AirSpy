@@ -1,10 +1,8 @@
 package com.mac.airspy.utils;
 
-
 import com.mac.airspy.ARObject;
 import com.mac.airspy.MovingARObject;
 import com.mac.airspy.location.SimpleLocation;
-
 
 public class MathUtils {
     public static final double FEET_TO_METERS = 0.3048;
@@ -38,7 +36,7 @@ public class MathUtils {
         double l2Lat = l2.getLatitude();
         double l2Long = l2.getLongtitude();
 
-        double dLat =  Math.toRadians(l2Lat - l1Lat);
+        double dLat = Math.toRadians(l2Lat - l1Lat);
         double dLong = Math.toRadians(l2Long - l1Long);
 
         double distY = dLat * EARTH_RADIUS;
@@ -52,7 +50,7 @@ public class MathUtils {
 
         double distX = R2 * dLong;
 
-        double distZ = l2.getAltitude()-l1.getAltitude();
+        double distZ = l2.getAltitude() - l1.getAltitude();
 
         return new Vector3D(distX, distY, distZ);
     }

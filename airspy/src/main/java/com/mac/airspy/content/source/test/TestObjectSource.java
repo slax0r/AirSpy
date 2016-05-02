@@ -18,7 +18,6 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
-
 public class TestObjectSource implements ObjectSource {
     @Inject
     private Context ctx;

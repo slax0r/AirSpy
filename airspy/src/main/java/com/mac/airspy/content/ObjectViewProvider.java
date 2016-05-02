@@ -6,7 +6,6 @@ import com.mac.airspy.ARObject;
 
 import java.io.IOException;
 
-
 public interface ObjectViewProvider {
     View getView(ARObject object) throws IOException;
 }

@@ -4,7 +4,6 @@ import android.content.SharedPreferences;
 
 import com.google.inject.Inject;
 
-
 public class UserPreferencesHelper {
     @Inject
     private SharedPreferences sharedPrefs;

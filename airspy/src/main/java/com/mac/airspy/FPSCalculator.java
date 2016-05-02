@@ -1,6 +1,5 @@
 package com.mac.airspy;
 
-
 public class FPSCalculator {
     private int fps = 0;
     private int frameCounter = 0;

@@ -13,7 +13,6 @@ import java.text.DecimalFormatSymbols;
 import java.text.NumberFormat;
 import java.util.List;
 
-
 public class ObjectMarkersDrawer {
 
     private final NumberFormat numberFormat;

@@ -10,7 +10,6 @@ import roboguice.inject.ContextSingleton;
 import roboguice.inject.InjectView;
 import roboguice.util.SafeAsyncTask;
 
-
 @ContextSingleton
 public class ObjectDetailsDisplay implements SlidingUpPanelLayout.PanelSlideListener {
 

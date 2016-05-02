@@ -13,7 +13,6 @@ import com.mac.airspy.ComponentState;
 
 import roboguice.inject.ContextSingleton;
 
-
 @ContextSingleton
 public class LocationService extends BaseApplicationComponent implements BackgroundLocationService.LocationListener {
 

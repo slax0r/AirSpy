@@ -17,7 +17,6 @@ import java.util.List;
 
 import javax.inject.Inject;
 
-
 public class TrafficProcessor {
     private static final String TAG = TrafficProcessor.class.getSimpleName();
 

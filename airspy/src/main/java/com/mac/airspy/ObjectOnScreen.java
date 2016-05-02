@@ -2,7 +2,6 @@ package com.mac.airspy;
 
 import android.graphics.PointF;
 
-
 public class ObjectOnScreen {
     public final PointF position;
     public final ARObject object;

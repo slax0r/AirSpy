@@ -17,7 +17,6 @@ import com.google.inject.Inject;
 
 import roboguice.service.RoboService;
 
-
 public class BackgroundLocationService extends RoboService implements
         GooglePlayServicesClient.ConnectionCallbacks,
         GooglePlayServicesClient.OnConnectionFailedListener,
@@ -151,7 +150,7 @@ public class BackgroundLocationService extends RoboService implements
         void onError(String message);
     }
 
-    public class LocalBinder extends Binder{
+    public class LocalBinder extends Binder {
         public BackgroundLocationService getServiceInstance() {
             return BackgroundLocationService.this;
         }

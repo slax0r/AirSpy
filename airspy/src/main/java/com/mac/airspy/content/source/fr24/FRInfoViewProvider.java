@@ -19,7 +19,6 @@ import org.apache.commons.lang3.StringUtils;
 import java.text.DecimalFormat;
 import java.text.NumberFormat;
 
-
 public class FRInfoViewProvider implements ObjectViewProvider {
     private static final NumberFormat numberFormat = new DecimalFormat("#0");
     @Inject

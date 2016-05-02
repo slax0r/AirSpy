@@ -2,7 +2,6 @@ package com.mac.airspy.location;
 
 import android.location.Location;
 
-
 public class SimpleLocation {
     private double longtitude;
     private double latitude;

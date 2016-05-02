@@ -1,8 +1,6 @@
 package com.mac.airspy.parameters;
 
-
-public class CameraParameters{
-
+public class CameraParameters {
     //values depending on display orientation
     public final double horizontalViewAngle;
     public final double verticalViewAngle;

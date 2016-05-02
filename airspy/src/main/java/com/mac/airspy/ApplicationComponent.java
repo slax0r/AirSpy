@@ -1,6 +1,5 @@
 package com.mac.airspy;
 
-
 public interface ApplicationComponent {
     String getIdentifier();
 

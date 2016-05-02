@@ -9,8 +9,6 @@ import java.util.List;
 
 import roboguice.inject.ContextSingleton;
 
-
-
 @ContextSingleton
 public class VisibleObjectsObtainer {
     @Inject

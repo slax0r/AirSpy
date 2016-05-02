@@ -1,14 +1,5 @@
 package com.mac.airspy;
 
-import android.content.Context;
-import android.hardware.Camera;
-import android.util.Log;
-import android.view.*;
-import android.widget.Toast;
-
-import java.io.IOException;
-import java.util.List;
-
 import android.app.Activity;
 import android.content.res.Configuration;
 import android.hardware.Camera;
@@ -22,50 +13,37 @@ import android.view.SurfaceView;
 import android.widget.RelativeLayout;
 import android.widget.Toast;
 
+import java.io.IOException;
+import java.util.List;
+
 /**
  * This class assumes the parent layout is RelativeLayout.LayoutParams.
  */
 public class CameraPreview extends SurfaceView implements SurfaceHolder.Callback {
-    private static boolean DEBUGGING = true;
     private static final String LOG_TAG = "CameraPreviewSample";
     private static final String CAMERA_PARAM_ORIENTATION = "orientation";
     private static final String CAMERA_PARAM_LANDSCAPE = "landscape";
     private static final String CAMERA_PARAM_PORTRAIT = "portrait";
+    private static boolean DEBUGGING = true;
     protected Activity mActivity;
-    private SurfaceHolder mHolder;
     protected Camera mCamera;
     protected List<Camera.Size> mPreviewSizeList;
     protected List<Camera.Size> mPictureSizeList;
     protected Camera.Size mPreviewSize;
     protected Camera.Size mPictureSize;
-    private int mSurfaceChangedCallDepth = 0;
-    private int mCameraId;
-    private LayoutMode mLayoutMode;
-    private int mCenterPosX = -1;
-    private int mCenterPosY;
-
-    private SurfaceChangedListener surfaceChangedListener;
-
-    PreviewReadyCallback mPreviewReadyCallback = null;
-
-    public static enum LayoutMode {
-        FitToParent, // Scale to the size that no side is larger than the parent
-        NoBlank // Scale to the size that no side is smaller than the parent
-    };
-
-    public interface PreviewReadyCallback {
-        public void onPreviewReady();
-    }
-
-    public interface SurfaceChangedListener{
-        public void onSurfaceChanged(Camera.Parameters parameters);
-    }
-
     /**
      * State flag: true when surface's layout size is set and surfaceChanged()
      * process has not been completed.
      */
     protected boolean mSurfaceConfiguring = false;
+    PreviewReadyCallback mPreviewReadyCallback = null;
+    private SurfaceHolder mHolder;
+    private int mSurfaceChangedCallDepth = 0;
+    private int mCameraId;
+    private LayoutMode mLayoutMode;
+    private int mCenterPosX = -1;
+    private int mCenterPosY;
+    private SurfaceChangedListener surfaceChangedListener;
 
     public CameraPreview(Activity activity, int cameraId, LayoutMode mode, SurfaceChangedListener surfaceChangedListener) {
         super(activity); // Always necessary
@@ -385,6 +363,19 @@ public class CameraPreview extends SurfaceView implements SurfaceHolder.Callback
 
     public void setOnPreviewReady(PreviewReadyCallback cb) {
         mPreviewReadyCallback = cb;
+    }
+
+    public enum LayoutMode {
+        FitToParent, // Scale to the size that no side is larger than the parent
+        NoBlank // Scale to the size that no side is smaller than the parent
+    }
+
+    public interface PreviewReadyCallback {
+        void onPreviewReady();
+    }
+
+    public interface SurfaceChangedListener {
+        void onSurfaceChanged(Camera.Parameters parameters);
     }
 }
 

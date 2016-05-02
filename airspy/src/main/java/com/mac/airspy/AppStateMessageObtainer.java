@@ -9,7 +9,6 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.util.Properties;
 
-
 public class AppStateMessageObtainer {
 
     private final Context ctx;
@@ -31,7 +30,7 @@ public class AppStateMessageObtainer {
     public String getCurrentStateMessage() {
         ComponentState state = applicationController.getState();
 
-        String stateIdentifier=null;
+        String stateIdentifier = null;
         String stateMessage = null;
         if (ComponentState.READY != state) {
             ApplicationComponent blockingComponent = applicationController.getBlockingComponent();

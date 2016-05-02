@@ -9,7 +9,6 @@ import com.mac.airspy.utils.ResolutionUtils;
 
 import java.util.List;
 
-
 public class ARLayerTouchListener implements View.OnTouchListener {
 
     private static final int OBJECT_SELECTION_RADIUS_DP = 50;

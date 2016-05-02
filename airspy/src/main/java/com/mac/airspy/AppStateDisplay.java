@@ -10,7 +10,6 @@ import com.google.inject.Inject;
 
 import roboguice.inject.ContextSingleton;
 
-
 @ContextSingleton
 public class AppStateDisplay implements ApplicationComponent.StateChangedListener {
 

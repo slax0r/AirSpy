@@ -8,7 +8,6 @@ import com.google.inject.Inject;
 import roboguice.inject.ContextSingleton;
 import roboguice.inject.InjectView;
 
-
 @ContextSingleton
 public class RangeComponent implements SeekBar.OnSeekBarChangeListener {
 

@@ -3,7 +3,6 @@ package com.mac.airspy;
 import com.mac.airspy.location.SimpleLocation;
 import com.mac.airspy.utils.Vector3D;
 
-
 public abstract class BaseARObject implements ARObject {
     protected final String id;
     protected SimpleLocation location;

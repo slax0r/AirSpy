@@ -1,7 +1,6 @@
 package com.mac.airspy.parameters;
 
-
-public class ScreenParameters{
+public class ScreenParameters {
     public final int sizeX;
     public final int sizeY;
 

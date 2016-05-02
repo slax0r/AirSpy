@@ -19,8 +19,6 @@ import java.util.concurrent.TimeUnit;
 import roboguice.RoboGuice;
 import roboguice.inject.ContextSingleton;
 
-
-
 @ContextSingleton
 public class ObjectsProvider extends BaseApplicationComponent {
 

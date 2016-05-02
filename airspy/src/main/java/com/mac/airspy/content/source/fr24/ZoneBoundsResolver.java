@@ -4,7 +4,6 @@ import com.google.inject.Inject;
 import com.mac.airspy.location.LocationService;
 import com.mac.airspy.location.SimpleLocation;
 
-
 public class ZoneBoundsResolver {
 
     public static final int LONGTITUDE_MARGIN = 4;

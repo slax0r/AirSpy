@@ -5,7 +5,6 @@ import com.mac.airspy.location.LocationService;
 
 import roboguice.inject.ContextSingleton;
 
-
 @ContextSingleton
 public class ApplicationController extends BaseApplicationComponent
         implements ApplicationComponent.StateChangedListener {

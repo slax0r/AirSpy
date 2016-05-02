@@ -1,112 +1,132 @@
 <?xml version="1.0" encoding="utf-8"?>
-
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-              android:weightSum="10"
-              android:orientation="horizontal"
-              android:layout_width="match_parent"
-              android:layout_height="match_parent" android:padding="6dp" android:gravity="center_vertical">
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center_vertical"
+    android:orientation="horizontal"
+    android:padding="6dp"
+    android:weightSum="10">
 
     <RelativeLayout
-            android:layout_marginRight="15dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="15dp">
+
+        <com.makeramen.RoundedImageView xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/imageView"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content">
-        <com.makeramen.RoundedImageView
-                xmlns:app="http://schemas.android.com/apk/res-auto"
-                android:id="@+id/imageView"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:adjustViewBounds="true"
+            app:border_color="#fff0f0f0"
+            app:border_width="1dip"
+            app:corner_radius="4dip"
+            app:mutate_background="true" />
+
+        <ProgressBar
+            android:id="@+id/progressBar"
+            style="?android:attr/progressBarStyleSmall"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="6"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="28dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/imageView4"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginRight="4dp"
+                android:adjustViewBounds="true"
+                android:src="@drawable/aircraft" />
+
+            <TextView
+                android:id="@+id/textView6"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_centerInParent="true"
-                android:adjustViewBounds="true"
-                app:corner_radius="4dip"
-                app:border_width="1dip"
-                app:border_color="#fff0f0f0"
-                app:mutate_background="true"/>
-        <ProgressBar
-                style="?android:attr/progressBarStyleSmall"
-                android:layout_centerInParent="true"
-                android:layout_width="100dp"
-                android:layout_height="wrap_content"
-                android:id="@+id/progressBar"/>
-    </RelativeLayout>
-    <LinearLayout
-            android:layout_weight="6"
-            android:orientation="vertical"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            >
-        <LinearLayout
-                android:orientation="horizontal"
-                android:layout_width="fill_parent"
-                android:layout_height="28dp"
-                android:gravity="center_vertical">
-            <ImageView
-                    android:layout_marginRight="4dp"
-                    android:layout_width="wrap_content"
-                    android:layout_height="match_parent"
-                    android:adjustViewBounds="true"
-                    android:id="@+id/imageView4"
-                    android:src="@drawable/aircraft"/>
-            <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="New Text"
-                    android:id="@+id/textView6"/>
+                android:text="New Text" />
         </LinearLayout>
+
         <LinearLayout
-                android:orientation="horizontal"
-                android:layout_width="fill_parent"
-                android:layout_height="28dp" android:gravity="center_vertical">
-            <ImageView android:layout_marginRight="4dp" android:layout_width="wrap_content"
-                       android:layout_height="match_parent" android:adjustViewBounds="true" android:id="@+id/imageView5"
-                       android:src="@drawable/speedometer"/>
+            android:layout_width="fill_parent"
+            android:layout_height="28dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/imageView5"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginRight="4dp"
+                android:adjustViewBounds="true"
+                android:src="@drawable/speedometer" />
+
             <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="New Text"
-                    android:id="@+id/textView5"/>
+                android:id="@+id/textView5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="New Text" />
         </LinearLayout>
     </LinearLayout>
+
     <LinearLayout
-            android:layout_weight="4"
-            android:orientation="vertical"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content">
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="4"
+        android:orientation="vertical">
+
         <LinearLayout
-                android:orientation="horizontal"
-                android:layout_width="wrap_content"
-                android:layout_height="28dp"
-                android:gravity="center_vertical">
+            android:layout_width="wrap_content"
+            android:layout_height="28dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
             <ImageView
-                    android:layout_marginRight="4dp"
-                    android:adjustViewBounds="true"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:id="@+id/imageView2"
-                    android:layout_gravity="center_vertical"
-                    android:src="@drawable/departure"/>
+                android:id="@+id/imageView2"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center_vertical"
+                android:layout_marginRight="4dp"
+                android:adjustViewBounds="true"
+                android:src="@drawable/departure" />
+
             <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="New Text"
-                    android:id="@+id/textView"/>
+                android:id="@+id/textView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="New Text" />
         </LinearLayout>
+
         <LinearLayout
-                android:orientation="horizontal"
-                android:layout_width="wrap_content"
-                android:layout_height="28dp"
-                android:gravity="center_vertical">
+            android:layout_width="wrap_content"
+            android:layout_height="28dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
             <ImageView
-                    android:layout_marginRight="4dp"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:adjustViewBounds="true"
-                    android:id="@+id/imageView3"
-                    android:src="@drawable/arrival"/>
+                android:id="@+id/imageView3"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginRight="4dp"
+                android:adjustViewBounds="true"
+                android:src="@drawable/arrival" />
+
             <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="New Text"
-                    android:id="@+id/textView2"/>
+                android:id="@+id/textView2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="New Text" />
         </LinearLayout>
     </LinearLayout>
 </LinearLayout>

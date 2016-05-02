@@ -13,7 +13,6 @@ import com.mac.airspy.utils.Vector3D;
 
 import roboguice.inject.ContextSingleton;
 
-
 @ContextSingleton
 public class RadarDrawer {
     public static final int OBJECT_CIRCLE_RADIUS_DP = 3;

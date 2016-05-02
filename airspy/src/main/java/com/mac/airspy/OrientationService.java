@@ -9,7 +9,6 @@ import com.google.inject.Inject;
 
 import roboguice.inject.ContextSingleton;
 
-
 @ContextSingleton
 public class OrientationService extends BaseApplicationComponent implements SensorEventListener{
 

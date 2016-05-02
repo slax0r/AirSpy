@@ -5,7 +5,6 @@ import com.mac.airspy.MovingARObject;
 
 import org.apache.commons.lang3.StringUtils;
 
-
 public class Plane extends BaseARObject implements MovingARObject{
 
     private String hex;

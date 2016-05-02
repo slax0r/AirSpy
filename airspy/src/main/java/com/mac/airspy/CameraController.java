@@ -12,7 +12,6 @@ import com.mac.airspy.parameters.CameraParameters;
 import roboguice.inject.ContextSingleton;
 import roboguice.inject.InjectView;
 
-
 @ContextSingleton
 public class CameraController extends BaseApplicationComponent implements CameraPreview.SurfaceChangedListener {
 
@@ -58,7 +57,7 @@ public class CameraController extends BaseApplicationComponent implements Camera
 
         if (Configuration.ORIENTATION_LANDSCAPE == resources.getConfiguration().orientation) {
             this.cameraParameters = new CameraParameters(cameraHorizontalAngle, cameraVerticalAngle);
-        }else {
+        } else {
             this.cameraParameters = new CameraParameters(cameraVerticalAngle, cameraHorizontalAngle);
         }
 
