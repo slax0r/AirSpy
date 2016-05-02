@@ -1,8 +1,6 @@
 package com.mac.airspy.parameters;
 
-/**
- * Created by Maciej on 02.02.14.
- */
+
 public class CameraParameters{
 
     //values depending on display orientation

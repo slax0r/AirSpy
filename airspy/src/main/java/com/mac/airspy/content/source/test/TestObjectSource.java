@@ -4,10 +4,11 @@ import android.content.Context;
 import android.view.View;
 import android.widget.LinearLayout;
 import android.widget.TextView;
+
 import com.google.inject.Inject;
 import com.mac.airspy.ARObject;
-import com.mac.airspy.content.ObjectViewProvider;
 import com.mac.airspy.content.ObjectSource;
+import com.mac.airspy.content.ObjectViewProvider;
 import com.mac.airspy.location.LocationService;
 import com.mac.airspy.location.SimpleLocation;
 import com.mac.airspy.utils.MathUtils;
@@ -17,9 +18,7 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
-/**
- * Created by Maciej on 2014-10-12.
- */
+
 public class TestObjectSource implements ObjectSource {
     @Inject
     private Context ctx;

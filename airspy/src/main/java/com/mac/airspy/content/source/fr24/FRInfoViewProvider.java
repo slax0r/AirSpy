@@ -2,33 +2,30 @@ package com.mac.airspy.content.source.fr24;
 
 import android.app.Activity;
 import android.content.Context;
-import android.graphics.Bitmap;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
+
 import com.google.inject.Inject;
 import com.mac.airspy.ARObject;
 import com.mac.airspy.R;
 import com.mac.airspy.content.ObjectViewProvider;
 import com.squareup.picasso.Callback;
 import com.squareup.picasso.Picasso;
+
 import org.apache.commons.lang3.StringUtils;
 
 import java.text.DecimalFormat;
 import java.text.NumberFormat;
 
-/**
- * Created by Maciej on 2014-10-23.
- */
+
 public class FRInfoViewProvider implements ObjectViewProvider {
+    private static final NumberFormat numberFormat = new DecimalFormat("#0");
     @Inject
     private LayoutInflater layoutInflater;
-
     @Inject
     private Context ctx;
-
-    private static final NumberFormat numberFormat = new DecimalFormat("#0");
 
     @Override
     public View getView(ARObject object) {

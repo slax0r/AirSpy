@@ -8,6 +8,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
+
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.PropertyNamingStrategy;
 import com.google.inject.Inject;
@@ -17,25 +18,21 @@ import com.mac.airspy.content.ObjectViewProvider;
 import com.mac.airspy.content.source.fr24.dto.PlaneDetailsDto;
 import com.squareup.picasso.Callback;
 import com.squareup.picasso.Picasso;
+
 import org.apache.commons.lang3.StringUtils;
 
 import java.io.IOException;
 import java.io.InputStream;
 
-/**
- * Created by Maciej on 2015-03-21.
- */
+
 public class FRDetailsViewProvider implements ObjectViewProvider {
+    private final ObjectMapper objectMapper = new ObjectMapper();
     @Inject
     private LayoutInflater layoutInflater;
-
     @Inject
     private FlightRadarClient frClient;
-
     @Inject
     private Context ctx;
-
-    private final ObjectMapper objectMapper = new ObjectMapper();
 
     public FRDetailsViewProvider() {
         objectMapper.setPropertyNamingStrategy(PropertyNamingStrategy.CAMEL_CASE_TO_LOWER_CASE_WITH_UNDERSCORES);

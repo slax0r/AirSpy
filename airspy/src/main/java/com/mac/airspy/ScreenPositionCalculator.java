@@ -1,6 +1,7 @@
 package com.mac.airspy;
 
 import android.graphics.PointF;
+
 import com.google.inject.Inject;
 import com.mac.airspy.location.LocationService;
 import com.mac.airspy.location.SimpleLocation;
@@ -8,9 +9,7 @@ import com.mac.airspy.parameters.CameraParameters;
 import com.mac.airspy.parameters.ScreenParameters;
 import com.mac.airspy.utils.Vector3D;
 
-/**
- * Created by Maciej on 2014-10-05.
- */
+
 public class ScreenPositionCalculator {
 
     public static final int SCREEN_VISIBILITY_MARGIN_PX = 100;
@@ -100,9 +99,7 @@ public class ScreenPositionCalculator {
             return true;
         if (posY < 0 - SCREEN_VISIBILITY_MARGIN_PX)
             return true;
-        if (posY > screenParameters.sizeY + SCREEN_VISIBILITY_MARGIN_PX)
-            return true;
+        return posY > screenParameters.sizeY + SCREEN_VISIBILITY_MARGIN_PX;
 
-        return false;
     }
 }

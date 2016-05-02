@@ -2,9 +2,7 @@ package com.mac.airspy.content.source.fr24.dto;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
-/**
- * Created by Maciej on 2015-03-21.
- */
+
 @JsonIgnoreProperties(ignoreUnknown = true)
 public class PlaneDetailsDto {
     private String fromCity;

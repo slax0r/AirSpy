@@ -5,9 +5,7 @@ import com.mac.airspy.ARObject;
 import com.mac.airspy.MovingARObject;
 import com.mac.airspy.location.SimpleLocation;
 
-/**
- * Created by Maciej on 02.02.14.
- */
+
 public class MathUtils {
     public static final double FEET_TO_METERS = 0.3048;
     public static final double KNOTS_TO_KMH = 1.852;

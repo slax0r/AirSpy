@@ -1,22 +1,23 @@
 package com.mac.airspy;
 
-import android.graphics.*;
+import android.graphics.Canvas;
+import android.graphics.Color;
+import android.graphics.PixelFormat;
+import android.graphics.PorterDuff;
 import android.util.Log;
-import android.view.*;
+import android.view.SurfaceHolder;
+import android.view.SurfaceView;
 import android.widget.TextView;
+
 import com.google.inject.Inject;
 import com.mac.airspy.parameters.ScreenParameters;
+
+import java.util.List;
+
 import roboguice.inject.ContextSingleton;
 import roboguice.inject.InjectView;
 
-import java.text.DecimalFormat;
-import java.text.DecimalFormatSymbols;
-import java.text.NumberFormat;
-import java.util.List;
 
-/**
- * Created by Maciej on 2014-10-04.
- */
 
 @ContextSingleton
 public class ARLayer extends BaseApplicationComponent implements SurfaceHolder.Callback {

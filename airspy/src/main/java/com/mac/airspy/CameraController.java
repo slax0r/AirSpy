@@ -4,18 +4,15 @@ import android.app.Activity;
 import android.content.res.Configuration;
 import android.content.res.Resources;
 import android.hardware.Camera;
-import android.util.Log;
-import android.view.WindowManager;
-import android.widget.FrameLayout;
 import android.widget.RelativeLayout;
+
 import com.google.inject.Inject;
 import com.mac.airspy.parameters.CameraParameters;
+
 import roboguice.inject.ContextSingleton;
 import roboguice.inject.InjectView;
 
-/**
- * Created by Maciej on 2014-10-04.
- */
+
 @ContextSingleton
 public class CameraController extends BaseApplicationComponent implements CameraPreview.SurfaceChangedListener {
 

@@ -2,24 +2,20 @@ package com.mac.airspy;
 
 import android.content.Context;
 import android.util.Log;
+
 import com.google.inject.Inject;
 
 import java.io.IOException;
 import java.io.InputStream;
 import java.util.Properties;
 
-/**
- * Created by Maciej on 2014-10-16.
- */
 
 public class AppStateMessageObtainer {
 
     private final Context ctx;
-
+    private final Properties properties = new Properties();
     @Inject
     private ApplicationController applicationController;
-
-    private final Properties properties = new Properties();
 
     @Inject
     public AppStateMessageObtainer(Context ctx) {

@@ -3,21 +3,23 @@ package com.mac.airspy;
 import android.app.Activity;
 import android.util.Log;
 import android.widget.Toast;
+
 import com.google.inject.Inject;
-import com.mac.airspy.content.ObjectViewProvider;
 import com.mac.airspy.content.ObjectSource;
+import com.mac.airspy.content.ObjectViewProvider;
 import com.mac.airspy.content.source.fr24.FRObjectSource;
-import roboguice.RoboGuice;
-import roboguice.inject.ContextSingleton;
 
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
-import java.util.concurrent.*;
+import java.util.concurrent.Executors;
+import java.util.concurrent.ScheduledExecutorService;
+import java.util.concurrent.TimeUnit;
 
-/**
- * Created by Maciej on 2014-10-12.
- */
+import roboguice.RoboGuice;
+import roboguice.inject.ContextSingleton;
+
+
 
 @ContextSingleton
 public class ObjectsProvider extends BaseApplicationComponent {
@@ -78,12 +80,21 @@ public class ObjectsProvider extends BaseApplicationComponent {
         return objects;
     }
 
+    public ObjectViewProvider getInfoViewProvider() {
+        return objectSource.getInfoViewProvider();
+    }
+
+    public ObjectViewProvider getDetailsViewProvider() {
+        return objectSource.getDetailsViewProvider();
+    }
+
     private class UpdateObjectsCommand implements Runnable {
 
         private final ObjectSource objectSource;
 
 
         private boolean cancelled;
+
         private UpdateObjectsCommand(ObjectSource objectSource) {
             this.objectSource = objectSource;
         }
@@ -103,7 +114,7 @@ public class ObjectsProvider extends BaseApplicationComponent {
             }
 
             //todo delete
-            ((Activity)ctx).runOnUiThread(new Runnable() {
+            ((Activity) ctx).runOnUiThread(new Runnable() {
                 @Override
                 public void run() {
                     Toast.makeText(ctx, "Objects updated", Toast.LENGTH_SHORT).show();
@@ -119,13 +130,5 @@ public class ObjectsProvider extends BaseApplicationComponent {
             cancelled = true;
         }
 
-    }
-
-    public ObjectViewProvider getInfoViewProvider() {
-        return objectSource.getInfoViewProvider();
-    }
-
-    public ObjectViewProvider getDetailsViewProvider() {
-        return objectSource.getDetailsViewProvider();
     }
 }

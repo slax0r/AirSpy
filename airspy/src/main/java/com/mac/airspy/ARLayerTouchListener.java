@@ -3,31 +3,35 @@ package com.mac.airspy;
 import android.content.Context;
 import android.view.MotionEvent;
 import android.view.View;
+
 import com.google.inject.Inject;
 import com.mac.airspy.utils.ResolutionUtils;
 
 import java.util.List;
 
-/**
- * Created by Maciej on 2014-10-21.
- */
+
 public class ARLayerTouchListener implements View.OnTouchListener {
-
-    @Inject
-    private VisibleObjectsObtainer visibleObjectsObtainer;
-
-    @Inject
-    private ObjectDetailsDisplay objectDetailsDisplay;
 
     private static final int OBJECT_SELECTION_RADIUS_DP = 50;
     private static final int OBJECT_MARKER_HEIGHT_DP = 60;
     private final float OBJECT_SELECTION_RADIUS_PX;
     private final float OBJECT_MARKER_HEIGHT_PX;
+    @Inject
+    private VisibleObjectsObtainer visibleObjectsObtainer;
+    @Inject
+    private ObjectDetailsDisplay objectDetailsDisplay;
 
     @Inject
     public ARLayerTouchListener(Context ctx) {
         OBJECT_SELECTION_RADIUS_PX = ResolutionUtils.dpToPx(ctx, OBJECT_SELECTION_RADIUS_DP);
         OBJECT_MARKER_HEIGHT_PX = ResolutionUtils.dpToPx(ctx, OBJECT_MARKER_HEIGHT_DP);
+    }
+
+    private static double calculateDistance(ObjectOnScreen object, MotionEvent event) {
+        float dx = object.position.x - event.getX();
+        float dy = object.position.y - event.getY();
+
+        return Math.sqrt(Math.pow(dx, 2) + Math.pow(dy, 2));
     }
 
     @Override
@@ -70,12 +74,5 @@ public class ARLayerTouchListener implements View.OnTouchListener {
         }
 
         return bestMatch;
-    }
-
-    private static double calculateDistance(ObjectOnScreen object, MotionEvent event) {
-        float dx = object.position.x - event.getX();
-        float dy = object.position.y - event.getY();
-
-        return Math.sqrt(Math.pow(dx, 2) + Math.pow(dy, 2));
     }
 }

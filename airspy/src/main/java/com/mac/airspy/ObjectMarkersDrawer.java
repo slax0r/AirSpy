@@ -5,6 +5,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
+
 import com.google.inject.Inject;
 
 import java.text.DecimalFormat;
@@ -12,9 +13,7 @@ import java.text.DecimalFormatSymbols;
 import java.text.NumberFormat;
 import java.util.List;
 
-/**
- * Created by Maciej on 2015-04-05.
- */
+
 public class ObjectMarkersDrawer {
 
     private final NumberFormat numberFormat;

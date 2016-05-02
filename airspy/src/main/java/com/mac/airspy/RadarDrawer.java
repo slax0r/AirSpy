@@ -1,29 +1,25 @@
 package com.mac.airspy;
 
 import android.content.Context;
-import android.graphics.*;
-import android.view.SurfaceHolder;
-import android.view.SurfaceView;
-import android.view.View;
-import android.widget.Toast;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
+import android.graphics.Canvas;
+import android.graphics.Color;
+import android.graphics.Paint;
+
 import com.google.inject.Inject;
-import com.mac.airspy.location.LocationService;
 import com.mac.airspy.utils.ResolutionUtils;
 import com.mac.airspy.utils.Vector3D;
-import roboguice.inject.ContextSingleton;
-import roboguice.inject.InjectView;
 
-/**
- * Created by Maciej on 2015-03-22.
- */
+import roboguice.inject.ContextSingleton;
+
 
 @ContextSingleton
 public class RadarDrawer {
-    private static final float RADAR_SCALE_RATIO = 0.85f;
     public static final int OBJECT_CIRCLE_RADIUS_DP = 3;
     public static final int RADAR_MARGIN_DP = 15;
     public static final int RADAR_SIZE_DP = 140;
-
+    private static final float RADAR_SCALE_RATIO = 0.85f;
     @Inject
     private ObjectsProvider objectsProvider;
 

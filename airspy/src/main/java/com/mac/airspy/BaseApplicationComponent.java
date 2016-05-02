@@ -2,11 +2,10 @@ package com.mac.airspy;
 
 import android.app.Activity;
 import android.content.Context;
+
 import com.google.inject.Inject;
 
-/**
- * Created by Maciej on 2014-10-04.
- */
+
 public abstract class BaseApplicationComponent implements ApplicationComponent {
     @Inject
     protected Context ctx;
@@ -14,13 +13,6 @@ public abstract class BaseApplicationComponent implements ApplicationComponent {
     protected ComponentState state = ComponentState.STOPPED;
 
     private StateChangedListener stateListener;
-
-    protected void setState(ComponentState state) {
-        if (this.state != state) {
-            BaseApplicationComponent.this.state = state;
-            notifyListener();
-        }
-    }
 
     protected void notifyListener() {
         Activity activity = (Activity) ctx;
@@ -33,7 +25,6 @@ public abstract class BaseApplicationComponent implements ApplicationComponent {
             }
         });
     }
-
 
     @Override
     public String getIdentifier() {
@@ -48,5 +39,12 @@ public abstract class BaseApplicationComponent implements ApplicationComponent {
     @Override
     public ComponentState getState() {
         return state;
+    }
+
+    protected void setState(ComponentState state) {
+        if (this.state != state) {
+            BaseApplicationComponent.this.state = state;
+            notifyListener();
+        }
     }
 }

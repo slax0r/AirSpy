@@ -1,6 +1,7 @@
 package com.mac.airspy.content.source.fr24;
 
 import android.util.Log;
+
 import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.mac.airspy.ObjectsProvider;
@@ -9,15 +10,14 @@ import com.mac.airspy.location.SimpleLocation;
 import com.mac.airspy.utils.MathUtils;
 import com.mac.airspy.utils.Vector3D;
 
-import javax.inject.Inject;
 import java.io.IOException;
 import java.io.InputStream;
 import java.util.LinkedList;
 import java.util.List;
 
-/**
- * Created by Maciej on 03.03.14.
- */
+import javax.inject.Inject;
+
+
 public class TrafficProcessor {
     private static final String TAG = TrafficProcessor.class.getSimpleName();
 

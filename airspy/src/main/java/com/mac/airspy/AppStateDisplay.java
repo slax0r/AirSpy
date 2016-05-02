@@ -5,12 +5,11 @@ import android.app.AlertDialog;
 import android.app.ProgressDialog;
 import android.content.Context;
 import android.content.DialogInterface;
+
 import com.google.inject.Inject;
+
 import roboguice.inject.ContextSingleton;
 
-/**
- * Created by Maciej on 2014-10-16.
- */
 
 @ContextSingleton
 public class AppStateDisplay implements ApplicationComponent.StateChangedListener {

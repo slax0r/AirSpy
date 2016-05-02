@@ -3,16 +3,15 @@ package com.mac.airspy;
 import com.mac.airspy.location.SimpleLocation;
 import com.mac.airspy.utils.Vector3D;
 
-/**
- * Created by Maciej on 02.02.14.
- */
+
 public interface ARObject {
-    public Object getId();
+    Object getId();
 
-    public String getName();
+    String getName();
 
-    public Vector3D getApproximatedDistanceVector();
-    public void setApproximatedDistanceVector(Vector3D approximatedDistanceVector);
+    Vector3D getApproximatedDistanceVector();
 
-    public SimpleLocation getLocation();
+    void setApproximatedDistanceVector(Vector3D approximatedDistanceVector);
+
+    SimpleLocation getLocation();
 }

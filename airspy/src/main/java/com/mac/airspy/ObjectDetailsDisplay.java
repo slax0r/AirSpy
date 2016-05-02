@@ -1,17 +1,15 @@
 package com.mac.airspy;
 
-import android.util.Log;
 import android.view.View;
 import android.view.ViewGroup;
+
 import com.google.inject.Inject;
 import com.sothree.slidinguppanel.SlidingUpPanelLayout;
+
 import roboguice.inject.ContextSingleton;
 import roboguice.inject.InjectView;
 import roboguice.util.SafeAsyncTask;
 
-/**
- * Created by Maciej on 2014-10-21.
- */
 
 @ContextSingleton
 public class ObjectDetailsDisplay implements SlidingUpPanelLayout.PanelSlideListener {

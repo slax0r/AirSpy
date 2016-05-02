@@ -1,15 +1,15 @@
 package com.mac.airspy;
 
 import android.graphics.PointF;
+
 import com.google.inject.Inject;
-import roboguice.inject.ContextSingleton;
 
 import java.util.LinkedList;
 import java.util.List;
 
-/**
- * Created by Maciej on 2014-10-16.
- */
+import roboguice.inject.ContextSingleton;
+
+
 
 @ContextSingleton
 public class VisibleObjectsObtainer {

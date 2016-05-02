@@ -3,9 +3,6 @@ package com.mac.airspy;
 import roboguice.RoboGuice;
 import roboguice.inject.ContextSingleton;
 
-/**
- * Created by Maciej on 2014-10-11.
- */
 
 @ContextSingleton
 public class MainLoopController extends BaseApplicationComponent {

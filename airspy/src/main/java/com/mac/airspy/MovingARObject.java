@@ -1,12 +1,10 @@
 package com.mac.airspy;
 
-/**
- * Created by Maciej on 2014-10-23.
- */
+
 public interface MovingARObject extends ARObject {
-    public double getSpeedKmh();
+    double getSpeedKmh();
 
-    public double getTrack();
+    double getTrack();
 
-    public long getLastUpdateTime();
+    long getLastUpdateTime();
 }

@@ -2,9 +2,7 @@ package com.mac.airspy;
 
 import com.google.inject.Inject;
 
-/**
- * Created by Maciej on 2014-10-11.
- */
+
 public class MainLoop implements Runnable {
     private boolean running = true;
 

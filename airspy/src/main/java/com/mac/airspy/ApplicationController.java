@@ -2,11 +2,9 @@ package com.mac.airspy;
 
 import com.google.inject.Inject;
 import com.mac.airspy.location.LocationService;
+
 import roboguice.inject.ContextSingleton;
 
-/**
- * Created by Maciej on 2014-10-05.
- */
 
 @ContextSingleton
 public class ApplicationController extends BaseApplicationComponent
@@ -166,19 +164,18 @@ public class ApplicationController extends BaseApplicationComponent
         setState(newState);
     }
 
+    @Override
+    public ComponentState getState() {
+        synchronized (this) {
+            return super.getState();
+        }
+    }
 
     @Override
     protected void setState(ComponentState state) {
         //notify listener even if new state is the same as old
         this.state = state;
         super.notifyListener();
-    }
-
-    @Override
-    public ComponentState getState() {
-        synchronized (this) {
-            return super.getState();
-        }
     }
 
     public ApplicationComponent getBlockingComponent() {

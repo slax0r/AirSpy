@@ -7,12 +7,12 @@ import android.content.ServiceConnection;
 import android.location.Location;
 import android.os.IBinder;
 import android.widget.Toast;
-import com.mac.airspy.*;
+
+import com.mac.airspy.BaseApplicationComponent;
+import com.mac.airspy.ComponentState;
+
 import roboguice.inject.ContextSingleton;
 
-/**
- * Created by Maciej on 2014-10-03.
- */
 
 @ContextSingleton
 public class LocationService extends BaseApplicationComponent implements BackgroundLocationService.LocationListener {

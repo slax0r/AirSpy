@@ -6,9 +6,7 @@ import com.mac.airspy.location.SimpleLocation;
 import com.mac.airspy.utils.MathUtils;
 import com.mac.airspy.utils.Vector3D;
 
-/**
- * Created by Maciej on 2015-03-22.
- */
+
 public class ObjectsPositionApproximator {
     private static final long APPROXIMATION_INTERVAL_MILLIS = 1000;
 

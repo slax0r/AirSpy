@@ -7,18 +7,17 @@ import android.os.Binder;
 import android.os.Bundle;
 import android.os.IBinder;
 import android.util.Log;
-import android.widget.Toast;
+
 import com.google.android.gms.common.ConnectionResult;
 import com.google.android.gms.common.GooglePlayServicesClient;
 import com.google.android.gms.common.GooglePlayServicesUtil;
 import com.google.android.gms.location.LocationClient;
 import com.google.android.gms.location.LocationRequest;
 import com.google.inject.Inject;
+
 import roboguice.service.RoboService;
 
-/**
- * Created by Maciej on 2014-10-02.
- */
+
 public class BackgroundLocationService extends RoboService implements
         GooglePlayServicesClient.ConnectionCallbacks,
         GooglePlayServicesClient.OnConnectionFailedListener,
@@ -26,14 +25,10 @@ public class BackgroundLocationService extends RoboService implements
 
     private static final long UPDATE_INTERVAL_SECONDS = 10;
     private static final long FASTEST_INTERVAL_SECONDS = 1;
-
+    private final LocalBinder binder = new LocalBinder();
     @Inject
     private Context ctx;
-
     private LocationListener listener;
-
-    private final LocalBinder binder = new LocalBinder();
-
     private LocationClient locationClient;
     private LocationRequest locationRequest;
 
@@ -150,15 +145,15 @@ public class BackgroundLocationService extends RoboService implements
         }
     }
 
+    public interface LocationListener {
+        void onLocationChanged(Location location);
+
+        void onError(String message);
+    }
+
     public class LocalBinder extends Binder{
         public BackgroundLocationService getServiceInstance() {
             return BackgroundLocationService.this;
         }
-    }
-
-    public static interface LocationListener {
-        public void onLocationChanged(Location location);
-
-        public void onError(String message);
     }
 }

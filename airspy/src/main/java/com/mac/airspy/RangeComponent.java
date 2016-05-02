@@ -2,13 +2,13 @@ package com.mac.airspy;
 
 import android.widget.SeekBar;
 import android.widget.TextView;
+
 import com.google.inject.Inject;
+
 import roboguice.inject.ContextSingleton;
 import roboguice.inject.InjectView;
 
-/**
- * Created by Maciej on 2015-03-22.
- */
+
 @ContextSingleton
 public class RangeComponent implements SeekBar.OnSeekBarChangeListener {
 

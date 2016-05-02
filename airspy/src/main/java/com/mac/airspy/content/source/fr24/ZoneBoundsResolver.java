@@ -4,12 +4,7 @@ import com.google.inject.Inject;
 import com.mac.airspy.location.LocationService;
 import com.mac.airspy.location.SimpleLocation;
 
-import java.text.DecimalFormat;
-import java.text.DecimalFormatSymbols;
 
-/**
- * Created by Maciej on 2015-03-21.
- */
 public class ZoneBoundsResolver {
 
     public static final int LONGTITUDE_MARGIN = 4;

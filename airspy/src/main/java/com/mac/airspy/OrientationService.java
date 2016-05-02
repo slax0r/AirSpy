@@ -4,15 +4,11 @@ import android.hardware.Sensor;
 import android.hardware.SensorEvent;
 import android.hardware.SensorEventListener;
 import android.hardware.SensorManager;
-import android.view.View;
-import com.google.inject.Inject;
-import com.google.inject.Singleton;
-import roboguice.inject.ContextSingleton;
-import roboguice.inject.InjectView;
 
-/**
- * Created by Maciej on 2014-10-03.
- */
+import com.google.inject.Inject;
+
+import roboguice.inject.ContextSingleton;
+
 
 @ContextSingleton
 public class OrientationService extends BaseApplicationComponent implements SensorEventListener{
