@@ -25,6 +25,9 @@ android {
     compileOptions {
 
     }
+    dexOptions {
+        javaMaxHeapSize "4g"
+    }
     buildTypes {
         release {
             minifyEnabled false
